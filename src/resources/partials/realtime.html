@@ -1,5 +1,4 @@
-<div ng-controller="RealtimeCtrl">
-  <!--title-->
+<div>
   <div class="page-title" >
     <div>
       RealTime
@@ -7,6 +6,18 @@
   </div>
   <!--content-->
   <div id="container" class="container" role="tabpanel">
-    
+    <div class="row">
+  		<div class="col-lg-6">
+    		<div class="input-group">
+      			<span class="input-group-btn">
+              Site
+      			</span>
+      			<input type="text" class="form-control" id="site" placeholder="site" ng-value="site" />
+      			<span class="input-group-btn">
+        			<button id="copy" class="btn btn-default" type="button">Copy URL</button>
+      			</span>
+    		</div><!-- /input-group -->
+  		</div><!-- /.col-lg-6 -->
+  	</div>
   </div>
 </div>

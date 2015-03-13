@@ -1,10 +1,20 @@
-/*POC for prweb*/
-'use strict';
-angular.module('pocApp.realtime', ['ngRoute']).config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/realtime', {
-    templateUrl: 'partials/realtime.html',
-    controller: 'RealtimeCtrl'
-  });
-}]).controller('RealtimeCtrl',function($scope) {
+angular.module('pocApp.realtime', [
+	'ui.router'
+])
 
-});
+.config(['$stateProvider', '$urlRouterProvider',
+	function ($stateProvider,   $urlRouterProvider) {
+	$stateProvider
+		.state("realtime", {
+			url: "/realtime",
+
+			templateUrl: 'partials/realtime.html',
+
+			controller: "RealtimeCtrl"
+		})
+	}
+])
+
+ .controller("RealtimeCtrl",['$state',function($state){
+ 	console.log("RealtimeCtrl reached!",$state);
+ }]);

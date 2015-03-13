@@ -1,12 +1,18 @@
-<div ng-controller="BatchCtrl">
+<div>
     <!--title-->
     <div class="page-title" >
         <div>
             Batch
         </div>
     </div>
+
     <!--content-->
     <div id="container" class="container" role="tabpanel">
+        <a ui-serf="batch.overview({granularity:'1', timeRange:'week'})">Batch overview -> granularity = 1, timeRange = week</a><br/>
+        <a ui-serf="batch.traffic({ 'granularity': granularity.value})">Batch traffic -> granularity : {{granularity.value}}</a><br/>
         
+        <a ng-click="testClick()">Go to Batch traffic -> granularity  = 1</a>
+
+        <div ui-view></div>
     </div>
 </div>

@@ -1,3 +1,3 @@
 var connect = require('connect');
 var serveStatic = require('serve-static');
-connect().use(serveStatic('../')).listen(8080);
+connect().use(serveStatic('../',{'index': ['index.html', 'index.htm']})).listen(8080);

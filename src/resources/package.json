@@ -14,6 +14,8 @@
 		"hashmap":"^2.0.0",
 		"d3": "^3.4.11",
 		"nvd3":"^1.1.10",
-		"moment":"^2.8.4"
+		"moment":"^2.8.4",
+		"zeroclipboard":"^2.2.0",
+		"angular-ui-router": "~0.2.13"
 	}
 }
