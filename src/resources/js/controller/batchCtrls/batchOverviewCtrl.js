@@ -1,20 +1,20 @@
 angular.module('pocApp.batch.overview', [
-	'ui.router'
+  'ui.router'
 ])
 
 .config(['$stateProvider', '$urlRouterProvider',
-	function ($stateProvider,   $urlRouterProvider) {
-	$stateProvider
-		.state("batch.overview", {
-			url: "/overview",
+  function ($stateProvider,   $urlRouterProvider) {
+  $stateProvider
+    .state("batch.overview", {
+      url: "/overview?granularity",
 
-			templateUrl: 'view/batch/overview.html',
+      templateUrl: 'view/batch/overview.html',
 
-			controller: "BatchOverviewCtrl"
-		})
-	}
+      controller: "BatchOverviewCtrl"
+    })
+  }
 ])
 
 .controller("BatchOverviewCtrl", ['$rootScope', function($rootScope){
-	console.log("BatchOverviewCtrl reached!", $rootScope.state);
+  console.log("BatchOverviewCtrl reached!", $rootScope.state);
 }]);

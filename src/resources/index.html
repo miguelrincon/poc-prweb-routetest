@@ -39,40 +39,40 @@
 
         <h2>Reports</h2>
         <ul class="nav nav-sidebar">
-          <li>
+          <li ui-sref-active="active">
             <a ui-sref="batch.overview">Overview</a>
           </li>
-          <li>
+          <li ui-sref-active="active">
             <a ui-sref="batch.traffic">Traffic Source</a>
           </li>
-          <li>
+          <li ui-sref-active="active">
             <a ui-sref="batch.device">Device Type (TODO)</a>
-          </li>
-          <li>
+          </li ui-sref-active="active">
+          <li ui-sref-active="active">
             <a ui-sref="batch.geo">Geo (TODO)</a>
-          </li>
-          <li>
+          </li ui-sref-active="active">
+          <li ui-sref-active="active">
             <a ui-sref="batch.top">Top Pages (TODO)</a>
           </li>
         </ul>
 
-      </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <div ui-view></div>
-        
         <code>
-           Some debug info:<br>
+          Some debug info:<br>
           <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
-          $state = {{$state.current.name}}<br>
-          $stateParams = {{$stateParams}}<br>
-          $state full url = {{ $state.$current.url.source }}<br>
-          $state.get = {{$state.get()}}
+          $state: <br> 
+          &nbsp; {{$state.current.name}}<br>
+          $stateParams: <br> 
+          &nbsp; {{$stateParams}}<br>
+          $state full url: <br>
+          &nbsp; {{ $state.$current.url.source }}<br>
 
           <!-- $state.$current is not a public api, we are using it to
                  display the full url for learning purposes-->
         </code>
 
-
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div ui-view></div>
       </div>
     </div>
 

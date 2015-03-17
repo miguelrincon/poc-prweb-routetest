@@ -2,10 +2,10 @@
 'use strict';
 
 angular.module('pocApp', [
-	'ui.router',
-	'ngResource',
-	'pocApp.realtime',
-	'pocApp.batch'
+  'ui.router',
+  'ngResource',
+  'pocApp.realtime',
+  'pocApp.batch'
 ])
 
 .run(
@@ -23,7 +23,7 @@ angular.module('pocApp', [
 )
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider
+  $urlRouterProvider
     // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
     .otherwise('/');
 

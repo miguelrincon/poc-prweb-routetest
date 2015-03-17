@@ -1,18 +1,13 @@
 <div>
-    <!--title-->
-    <div class="page-title" >
-        <div>
-            Batch
-        </div>
-    </div>
+  <!--title-->
+  <h1 class="page-header">
+    Batch
+  </h1>
 
-    <!--content-->
-    <div id="container" class="container" role="tabpanel">
-        <a >Batch overview -> granularity = 1, timeRange = week</a><br/>
-        <a ui-serf="batch.traffic({ 'granularity': granularity.value})">Batch traffic -> granularity : {{granularity.value}}</a><br/>
-        
-        <a ng-click="testClick()">Go to Batch traffic -> granularity  = 1</a>
+	<div class="alert alert-info" role="alert">
+	  This content is visible in all the batch pages
+	</div>
 
-        <div ui-view></div>
-    </div>
+	<!--content-->
+  <div ui-view></div>
 </div>

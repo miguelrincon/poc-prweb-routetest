@@ -1,28 +1,32 @@
+
+// This is a controller for one of the main sections of the reporting tool
+
 angular.module('pocApp.batch', [
-	'ui.router',
-	'pocApp.batch.overview',
-	'pocApp.batch.traffic'
+  'ui.router',
+  'pocApp.batch.overview',
+  'pocApp.batch.traffic'
 ])
 
 .config(['$stateProvider', '$urlRouterProvider',
-	function ($stateProvider,   $urlRouterProvider) {
-	$stateProvider
-		.state("batch", {
-			url: "/batch",
+  function ($stateProvider,   $urlRouterProvider) {
+  $stateProvider
+    .state("batch", {
+      url: "/batch",
 
-			abstract: true,
+      
+      abstract: true,
 
-			templateUrl: 'view/batch/index.html',
+      controller: "BatchController",
 
-			controller: "BatchController"
-		})
-	}
+      templateUrl: 'view/batch/index.html',
+    })
+  }
 ])
 
 .controller("BatchController", function($scope, $state){
-	$scope.granularity = {value: 1};
-	$scope.testClick = function(){
-		$state.go('batch.traffic', {granularity:'1'});
-	}
-	console.log("BatchController reached");
+  
+  // Here we can perform openrations global to this sections
+  $scope.state = $state;
+
+  console.log("BatchController reached");
 });
