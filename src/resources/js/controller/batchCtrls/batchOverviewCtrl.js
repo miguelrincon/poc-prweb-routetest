@@ -6,9 +6,9 @@ angular.module('pocApp.batch.overview', [
 	function ($stateProvider,   $urlRouterProvider) {
 	$stateProvider
 		.state("batch.overview", {
-			url: "/overview/granularity/:granularity/timeRange/:timeRange",
+			url: "/overview",
 
-			templateUrl: 'partial/batch/overview.html',
+			templateUrl: 'view/batch/overview.html',
 
 			controller: "BatchOverviewCtrl"
 		})

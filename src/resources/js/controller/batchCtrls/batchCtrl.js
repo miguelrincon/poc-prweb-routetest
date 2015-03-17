@@ -10,7 +10,9 @@ angular.module('pocApp.batch', [
 		.state("batch", {
 			url: "/batch",
 
-			templateUrl: 'partials/batch.html',
+			abstract: true,
+
+			templateUrl: 'view/batch/index.html',
 
 			controller: "BatchController"
 		})

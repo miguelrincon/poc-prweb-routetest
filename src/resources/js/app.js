@@ -23,16 +23,28 @@ angular.module('pocApp', [
 )
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-	/*$stateProvider
-		.state('realtime', {
-			url: '/realtime',
-			templateUrl: 'partials/realtime.html',
-			controller: 'RealtimeController'
-		})
-		.state('batch', {
-			url: '/batch',
-			templateUrl: 'partials/batch.html',
-			controller: 'BatchController'
-	  });*/
+	$urlRouterProvider
+    // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
+    .otherwise('/');
+
+  $stateProvider
+
+    //////////
+    // Home //
+    //////////
+
+    .state("home", {
+
+      // Use a url of "/" to set a states as the "index".
+      url: "/",
+
+      // Example of an inline template string. By default, templates
+      // will populate the ui-view within the parent state's template.
+      // For top level states, like this one, the parent template is
+      // the index.html file. So this template will be inserted into the
+      // ui-view within index.html.
+      templateUrl: 'view/index.html',
+
+    })
 }])
 

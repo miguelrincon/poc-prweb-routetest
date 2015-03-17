@@ -8,13 +8,13 @@ angular.module('pocApp.realtime', [
 		.state("realtime", {
 			url: "/realtime",
 
-			templateUrl: 'partials/realtime.html',
+			templateUrl: 'view/realtime/index.html',
 
 			controller: "RealtimeCtrl"
 		})
 	}
 ])
 
- .controller("RealtimeCtrl",['$state',function($state){
- 	console.log("RealtimeCtrl reached!",$state);
+ .controller("RealtimeCtrl", ['$state',function($state){
+ 	console.log("RealtimeCtrl reached!", $state);
  }]);
